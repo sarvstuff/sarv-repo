@@ -1,3 +1,4 @@
+--GX hub start
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
 
