@@ -1,6 +1,6 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "GX Hub | F-1.2", HidePremium = false, IntroText = "GX Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "GX HUB | NOQSEL", HidePremium = false, IntroText = "GX Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Hello!",
@@ -1510,6 +1510,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/TheScriptPirate/Proje
   	end    
 })
 
+GamesTab:AddButton({
+	Name = "Legends of Speed OP RelzHUB: c6ad8c40c28f2354ba2991fb",
+	Callback = function()
+-- Theme = ["Red", "Blue", "DarkBlue", "LightGreen", " Green", "Cyan", "Purple"] //Default: LightGreen;
+_G.Theme = "Cyan"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/main/execute.hack", true))()
+  	end    
+})
+
 OthersTab:AddButton({
 	Name = "FPSPING COUNTER",
 	Callback = function()
@@ -2056,6 +2065,20 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/stra
 
 ChangelogTab:AddButton({
 	Name = "added plenty of LOS script mobile/pc",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
+  	end    
+})
+
+ChangelogTab:AddButton({
+	Name = "JUST GX Update",
+	Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
+  	end    
+})
+
+ChangelogTab:AddButton({
+	Name = "updates or fixes bugs at free day or being requested",
 	Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
   	end    
