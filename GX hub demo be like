@@ -455,6 +455,13 @@ loadstring(game:HttpGet(('https://pastefy.app/VYIAk3o1/raw'),true))()
 })
 
 UniversalTab:AddButton({
+	Name = "BTR Better Roblox V2",
+	Callback = function()
+loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+  	end    
+})
+
+UniversalTab:AddButton({
 	Name = "Permanent TPTOOL",
 	Callback = function()
 loadstring(game:HttpGet("https://pastefy.app/IpjIW7ZH/raw"))()
@@ -500,6 +507,13 @@ GamesTab:AddButton({
 	Name = "Funky Friday AutoPlayer",
 	Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ShowerHead-FluxTeam/scripts/main/funky-friday-autoplay"))()
+  	end    
+})
+
+GamesTab:AddButton({
+	Name = "OP Funky Friday Unlimited Score GUI",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BalligusapoTT/BalligusapoTT/main/Nokey"))()
   	end    
 })
 
@@ -1624,10 +1638,10 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
   	end    
 })
 
-UniversalTab:AddButton({
-	Name = "BTR Better Roblox V2",
+TrollsTab:AddButton({
+	Name = "FE Curse Chat 18+",
 	Callback = function()
-loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()
   	end    
 })
 
