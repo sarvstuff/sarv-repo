@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
 
 local Window = OrionLib:MakeWindow({Name = "GX HUB | Stable", HidePremium = false, IntroText = "GX Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
 
