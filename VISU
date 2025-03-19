@@ -1,0 +1,215 @@
+debugX = true
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Vibrant's Interface Suite UI",
+   Icon = "user-round", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Loading..",
+   LoadingSubtitle = "by Sirius & Vibrant",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Vib Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "VISU",
+      Subtitle = "Verification",
+      Note = "To make sure you are not a robot  Enter: VISU_ACCESS", -- Use this to tell the user how to get a key
+      FileName = "VibKey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"VISU_ACCESS"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "Vibrant",
+   Content = "Thank you for using VISU!",
+   Duration = 8.5,
+   Image = "heart",
+})
+
+local Tab = Window:CreateTab("Universal", "sparkles") -- Title, Image
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Infinite Yield FE",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "SimpleSpy",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/refs/heads/main/SimpleSpySource.lua"))()
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Dark Dex V1",
+   Callback = function()
+loadstring(game:GetObjects("rbxassetid://3025032531")[1].Source)()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dark Dex V2",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpaceSpiffer/Scripts/main/Script4", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dark Dex V3",
+   Callback = function()
+loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dark Dex V4",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpaceSpiffer/Scripts/main/Script5", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dex",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Mobile Fly Gui V3",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-Fly-V3-16477"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Vehicle Fly",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Fe Emotes Player R15",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Trolls", "flame")
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "FE BALL R6/R15 - Be a Ball",
+   Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/BZr9bGDy", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE R6 Custom Sit Animation",
+   Callback = function()
+loadstring(game:HttpGet(('https://pastefy.app/XKxQtK2K/raw'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE Lag Switch V2 - Fake Lag",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_7wPfE71d836IXKFb72ToLBmDlsrvLuwsFeHzhcf4Yct4Jd2BS0Do88c56IBS9vfU.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE Tool Adjuster",
+   Callback = function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/dkufMsdA'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE DIRECT FLING V3",
+   Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "FE INVISIBLE FLING - Touch a Player",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Games", "gamepad-2")
+
+local Divider = Tab:CreateDivider()
+
+local Tab = Window:CreateTab("Others", "ellipsis")
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Anti Fall - Obby Games",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/AntiFall/main/Script"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Anti Fling - Use Wisely! ",
+   Callback = function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
+   end,
+})
+
+local Tab = Window:CreateTab("Changelogs", "notebook-pen")
+
+local Divider = Tab:CreateDivider()
+
+local Section = Tab:CreateSection("1.0 - Updated Library - OrionLib to Rayfield")
+
+local Tab = Window:CreateTab("GX Tools", "hammer")
+
+local Divider = Tab:CreateDivider()
+
+local Tab = Window:CreateTab("VISU", "settings")
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Destroy VISU",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
+
+Rayfield:LoadConfiguration()
