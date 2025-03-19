@@ -1,4 +1,4 @@
-### Hi there 👋
+not much here, some stuff i've scavanged for you to try!
 
 <!--
 **Cicero-Marxian/Cicero-Marxian** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
