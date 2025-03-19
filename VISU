@@ -156,6 +156,13 @@ loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
 })
 
 local Button = Tab:CreateButton({
+   Name = "FE JEFF ANIMATION R6",
+   Callback = function()
+loadstring(game:HttpGet("https://pastefy.app/2C3cRXXp/raw"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
    Name = "FE Tool Adjuster",
    Callback = function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/dkufMsdA'),true))()
