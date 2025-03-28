@@ -1,4 +1,4 @@
-not much here, some stuff i've scavanged for you to try!
+not much here, just some repository to store things i might use later in the future!!
 
 <!--
 **sarvrepo/sarvrepo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
