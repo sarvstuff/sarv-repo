@@ -1,0 +1,104 @@
+-- Speed Adjuster Script
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Create GUI
+local speedGui = Instance.new("ScreenGui")
+speedGui.Name = "Speed Adjuster"
+speedGui.Parent = game.CoreGui
+
+-- Main Tab
+local mainTab = Instance.new("Frame")
+mainTab.Size = UDim2.new(0, 200, 0, 150)
+mainTab.Position = UDim2.new(0, 10, 0, 10)
+mainTab.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+mainTab.BorderSizePixel = 2
+mainTab.Parent = speedGui
+
+-- Make GUI Dragable
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+mainTab.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainTab.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+mainTab.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+mouse.Move:Connect(function()
+    if dragging then
+        local delta = dragInput.Position - dragStart
+        mainTab.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
+
+-- Speed Adjuster
+local speedValue = 16 -- Default speed
+
+local speedSlider = Instance.new("TextLabel")
+speedSlider.Size = UDim2.new(0, 200, 0, 30)
+speedSlider.Position = UDim2.new(0, 0, 0, 0)
+speedSlider.Text = "Speed: " .. speedValue
+speedSlider.TextColor3 = Color3.new(1, 1, 1)
+speedSlider.BackgroundTransparency = 1
+speedSlider.Parent = mainTab
+
+local speedInput = Instance.new("TextBox")
+speedInput.Size = UDim2.new(0, 50, 0, 20)
+speedInput.Position = UDim2.new(0, 10, 0, 40)
+speedInput.Text = tostring(speedValue)
+speedInput.TextColor3 = Color3.new(1, 1, 1)
+speedInput.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+speedInput.Parent = mainTab
+
+local applyButton = Instance.new("TextButton")
+applyButton.Size = UDim2.new(0, 80, 0, 30)
+applyButton.Position = UDim2.new(0, 10, 0, 70)
+applyButton.Text = "Apply"
+applyButton.TextColor3 = Color3.new(1, 1, 1)
+applyButton.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+applyButton.Parent = mainTab
+
+applyButton.MouseButton1Click:Connect(function()
+    speedValue = tonumber(speedInput.Text) or speedValue
+    speedSlider.Text = "Speed: " .. speedValue
+    -- Adjust player speed using the speedValue
+    player.Character.Humanoid.WalkSpeed = speedValue
+end)
+
+-- Close Button
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Position = UDim2.new(1, -20, 0, 0)
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.new(1, 0, 0)
+closeButton.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+closeButton.Parent = mainTab
+
+closeButton.MouseButton1Click:Connect(function()
+    speedGui:Destroy()
+end)
+
+-- Additional Text
+local additionalText = Instance.new("TextLabel")
+additionalText.Size = UDim2.new(0, 200, 0, 20)
+additionalText.Position = UDim2.new(0, 0, 0, 120)
+additionalText.Text = "Sincerely, Vibrant"
+additionalText.TextColor3 = Color3.new(1, 1, 1)
+additionalText.BackgroundTransparency = 1
+additionalText.Parent = mainTab
